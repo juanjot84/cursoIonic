@@ -1,12 +1,12 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>
-      Buscar Película
+      Buscar Contenido
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-toolbar>
+<ion-toolbar color="dark">
   <ion-searchbar placeholder="Buscar película"
                  animated
                  debounce="700"
@@ -14,7 +14,7 @@
                  (ionChange)="buscar( $event )"></ion-searchbar>
 </ion-toolbar>
 
-<ion-content>
+<ion-content color="dark">
 
   <ion-grid *ngIf="buscando">
     <ion-row>
@@ -25,10 +25,11 @@
   </ion-grid>
 
   <ion-list *ngIf="peliculas.length === 0">
-    <ion-list-header>
+    <ion-list-header color="dark">
       <ion-label>Ideas</ion-label>
     </ion-list-header>
     <ion-item *ngFor="let idea of ideas"
+               color="dark"
               (click)="textoBuscar = idea">
       <ion-label color="primary"> {{ idea }} </ion-label>
     </ion-item>
